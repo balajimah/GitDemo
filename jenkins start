@@ -1,0 +1,12 @@
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+sudo yum upgrade
+# Add required dependencies for the jenkins package
+sudo yum install java-11-openjdk
+sudo yum install jenkins
+if any issue like preasto metadata. Just go to jenkins redhat package page https://get.jenkins.io/redhat-stable/ and download the directory.
+then try sudo yum install jenkins
+service jenkins start/stop/restart
+chkconfig jenkins on
+after jenkins started go aws linux server and copy the ip and paste the same in the browser and try to incorporate ip:8080

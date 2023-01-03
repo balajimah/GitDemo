@@ -1,0 +1,13 @@
+#Docker Commands so far in command prompt because it was installed globally in the system,
+
+docker ps # is used to view the containers list running or not. 
+docker-compose -f docker-compose.yaml up # used to view the list of the nodes in the docker. 
+docker images #used to view list of images in the container.
+docker run -d -p 4444:4444 -v dev/shm:/dev/shm selenium/standalone-chrome:latest #initialize the chrome standalone image for executing and provide the id for the container / download.
+docker --version # used to view the version of the application docker
+docker pull selenium/standalone:chromer:latest #to download the image
+#if you need to install different node different container. Need to prepare the yaml file
+docker-compose -f docker-compose.yaml up
+#if you need additional chrome or partuclar browsers
+docker-compose up --scale chrome=5
+bat file and .yaml file should be in same path to run the batch file 
